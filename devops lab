@@ -1,0 +1,43 @@
+1st,2nd 
+
+git commands and github
+
+create a folder in index.html
+git init
+git add .
+git branch -M main
+git commit -m "initial commit"
+git remote add origin "repourl"
+git push -u origin main
+
+
+
+git pull //to fetch the files from remote to local
+git branch //shows all branches
+git checkout branchname //switch branches
+git branch -d 
+git log
+
+git merge feature
+
+
+4th jenkins
+
+
+open jenkins
+click on new item
+give the project name 
+click on freestyle project
+click ok
+select git as source code management
+provide github url
+click on add post build actions 
+click on execute windows batch command
+
+provide python.exe url and file name which is present in github repo
+//to find python url use cmd in windows and type >where python
+example:
+C:\Users\anjal\AppData\Local\Programs\Python\Python311\python.exe hello.py
+
+click on save
+click on build and view console output
