@@ -41,3 +41,132 @@ C:\Users\anjal\AppData\Local\Programs\Python\Python311\python.exe hello.py
 
 click on save
 click on build and view console output
+
+
+4th jenkins html publish
+
+open jenkins
+click on manage jenkins
+click on plugins
+click on available plugins
+search for "HTML publisher"
+select and install
+go to dashboard
+
+click on new item
+give the project name 
+click on freestyle project
+click ok
+select git as source code management
+provide github url
+click on add post build actions 
+click on publish html reports   //make sure you have the html file in your github repo
+click on add
+provide html directory as .
+provide index pages as your html file name
+click on save
+
+to view output click on html report in the project which is present under configure project tab
+
+
+8th selenium js code
+
+
+const { Builder, Browser, By, Key } = require("selenium-webdriver");
+
+async function dkan() {
+  let driver = await new Builder().forBrowser(Browser.EDGE).build();
+  let term = ['hi', 'dsd','sdfs']
+
+  for(let i=0; i<term.length; i++){
+  await driver.get("https://www.google.com");
+  await driver.findElement(By.name('q')).sendKeys(term[i], Key.RETURN);
+  }
+
+}
+
+dkan();
+
+2nd git commands
+
+git init ----initializing repo
+git add . ----- adding files to staging area
+git commit -m "message"  ---- commits changes
+
+git remote add origin repourl --- connection between remote repo and local repo to push and pull changes
+
+git push -u origin main ---pushes 
+
+git log --- gives history of commits
+
+git status --- checks status
+
+git restore filename ----restore changes
+
+git branch ---shows all branches
+git branch feature --creates feature branch 
+git checkout branchname ----change from one branch to other branch
+
+git checkout -b feature ----create and move combination of branch and checkout
+
+git merge branchname --- merging the branches
+
+git pull --- get remote changes to local repo
+
+git clone url -----clones the repo
+
+
+6th docker commands
+
+
+docker build -t imagename .  ------ builds and image along with container
+
+docker run imagename  ----runs the container
+
+docker ps -a  -----displays container id with info
+
+docker logs containerid
+
+docker rm containerid ----delete container
+
+docker image ls ---display images
+
+docker image rm imageid ----remove image
+
+docker login ---used to login
+
+docker pull imagename ----pull the docker images from docker hub
+
+docker push imagename ----push the docker images to the docker hub
+
+
+7th docker 
+
+
+create a directory in your system
+>mkdir my-app
+>cd mp-app
+create hello.py file and add following 
+print("hello world")
+
+
+create "Dockerfile" and add following 
+
+FROM python
+
+WORKDIR /app  
+
+COPY . /app
+
+CMD ["python", "hello.py"]
+
+use the following commands to create docker image
+
+make sure docker desktop is running
+
+in your project directory run the following
+>docker build -t image-name .
+>docker run image-name
+
+
+
